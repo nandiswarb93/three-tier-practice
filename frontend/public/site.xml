@@ -1,0 +1,41 @@
+3️⃣ Sitemap.xml (VERY IMPORTANT)
+
+Create:
+
+/sitemap.xml
+
+
+Minimum version:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://arohihairoil.com/</loc>
+  </url>
+  <url>
+    <loc>https://arohihairoil.com/collection</loc>
+  </url>
+  <url>
+    <loc>https://arohihairoil.com/about</loc>
+  </url>
+  <url>
+    <loc>https://arohihairoil.com/contact</loc>
+  </url>
+</urlset>
+
+
+Then submit it in Google Search Console.
+
+4️⃣ Robots.txt (Optional but good)
+
+Create:
+
+/robots.txt
+
+
+Content:
+
+User-agent: *
+Allow: /
+
+Sitemap: https://arohihairoil.com/sitemap.xml

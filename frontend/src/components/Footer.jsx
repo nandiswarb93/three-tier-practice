@@ -104,6 +104,19 @@ const Footer = () => {
                 arohihairoilsra@gmail.com
               </a>
             </li>
+            <li>
+              {" "}
+              follow us on Instagram : &nbsp;
+              <a href="https://www.instagram.com/tulashi3277?igsh=NGFtemR4cXU1ODZv">
+                Instagram
+              </a>
+            </li>
+            <li>
+              follow us on Youtube :&nbsp;{" "}
+              <a href="https://youtube.com/@roshanisra?si=9YEuH4RQsXZOr2ZF">
+                Youtube
+              </a>
+            </li>
           </ul>
         </div>
       </div>

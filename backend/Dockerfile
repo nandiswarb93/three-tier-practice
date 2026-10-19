@@ -1,0 +1,19 @@
+FROM node:20
+WORKDIR /opt/server
+COPY package.json .
+COPY *.js .
+RUN npm i
+ENV  JWT_SECRET = "greatstack" \
+     ADMIN_EMAIL = "admin@example.com"\
+    ADMIN_PASSWORD = "greatstack123"\
+    EMAIL_USER = "nandiswarb93@gmail.com"\
+    EMAIL_PASS = "nxnfmpatotvmkwzj"\
+    MONGODB_URI = "mongodb+srv://nandiswarb93:XlnFDjTWdfR8PDx0@blinkeyit.kocmf.mongodb.net/?appName=BlinkeyIt"\
+    CLOUDINARY_API_KEY = "464352466292465"\
+    CLOUDINARY_SECRET_KEY = "1SEYfK6eNCjnnAGMekallFavvO4"\
+    CLOUDINARY_NAME = "dc7qhchcx"\
+    RAZORPAY_KEY_SECRET = '2G7nrwZw4sEniFX8dZwUEmqo'\
+    RAZORPAY_KEY_ID = 'rzp_test_RxMg6BmfjIIwlZ'
+
+CMD ["npm","run dev"]
+

@@ -2,7 +2,6 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
-// const { logoutUser } = useContext(ShopContext);
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -14,25 +13,10 @@ const Navbar = () => {
     getCartCount,
     navigate,
     token,
-    setToken,
-    setCartItems,
+    logoutUser, // ✅ use from context
   } = useContext(ShopContext);
 
-  // const logout = () => {
-  //   localStorage.removeItem("token");
-  //   setToken("");
-  //   setCartItems({});
-  //   navigate("/login");
-  // };
-
-   const logoutUser = () => {
-    setToken("");
-    setCartItems({});
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
-  // ✅ Close dropdown when clicking outside
+  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -77,17 +61,6 @@ const Navbar = () => {
 
       {/* RIGHT ICONS */}
       <div className="flex items-center gap-6 relative">
-        {/* SEARCH */}
-        {/* <img
-          onClick={() => {
-            setShowSearch(true);
-            navigate("/collection");
-          }}
-          src={assets.search_icon}
-          className="w-5 cursor-pointer"
-          alt="search"
-        /> */}
-
         {/* PROFILE */}
         <div className="relative" ref={dropdownRef}>
           <button
@@ -104,12 +77,13 @@ const Navbar = () => {
               <p
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                 onClick={() => {
-                  navigate("/myprofile");
+                  navigate("/profile");
                   setProfileOpen(false);
                 }}
               >
                 My Profile
               </p>
+
               <p
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                 onClick={() => {
